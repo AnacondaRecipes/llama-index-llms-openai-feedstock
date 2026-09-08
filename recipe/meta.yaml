@@ -13,10 +13,8 @@ source:
     sha256: 24f40b5190fdacabc24ddbb5f76364d15e4f030925220ea300d8a2dd4993c8cb
 
 build:
-  number: 0
-  # llama-index-core doesn't support Python 3.14+ because of dataclasses-json, which is unmaintainable anymore,
-  # and does not support Python 3.14+ as well (https://github.com/lidatong/dataclasses-json/issues/568)
-  skip: true # [py<310 or py>313]
+  number: 1
+  skip: true # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
